@@ -7,34 +7,24 @@
 
 <h1>Version 1 sf</h1>
 
-<audio id="6-0" controls style="display:none" preload="auto" >
-  <source src="acoustic/acousticguitar-6string-00-e.wav" type="audio/wav"> Your browser does not support the audio element.
 </audio><audio id="6-1" controls style="display:none" preload="auto" >
-  <source src="acoustic/acousticguitar-6string-01-f.wav" type="audio/wav"> Your browser does not support the audio element.
+  <source src="acoustic/one.wav" type="audio/wav"> Your browser does not support the audio element.
 </audio><audio id="6-2" controls style="display:none" preload="auto" >
-  <source src="acoustic/acousticguitar-6string-02-f.wav" type="audio/wav"> Your browser does not support the audio element.
+  <source src="acoustic/two.wav" type="audio/wav"> Your browser does not support the audio element.
 </audio><audio id="6-3" controls style="display:none" preload="auto" >
-  <source src="acoustic/acousticguitar-6string-03-g.wav" type="audio/wav"> Your browser does not support the audio element.
+  <source src="acoustic/three.wav" type="audio/wav"> Your browser does not support the audio element.
 </audio><audio id="6-4" controls style="display:none" preload="auto" >
-  <source src="acoustic/acousticguitar-6string-04-g.wav" type="audio/wav"> Your browser does not support the audio element.
+  <source src="acoustic/four.wav" type="audio/wav"> Your browser does not support the audio element.
 </audio><audio id="6-5" controls style="display:none" preload="auto" >
-  <source src="acoustic/acousticguitar-6string-05-a.wav" type="audio/wav"> Your browser does not support the audio element.
+  <source src="acoustic/five.wav" type="audio/wav"> Your browser does not support the audio element.
 </audio><audio id="6-6" controls style="display:none" preload="auto" >
-  <source src="acoustic/acousticguitar-6string-06-a.wav" type="audio/wav"> Your browser does not support the audio element.
+  <source src="acoustic/six.wav" type="audio/wav"> Your browser does not support the audio element.
 </audio><audio id="6-7" controls style="display:none" preload="auto" >
-  <source src="acoustic/acousticguitar-6string-07-b.wav" type="audio/wav"> Your browser does not support the audio element.
+  <source src="acoustic/seven.wav" type="audio/wav"> Your browser does not support the audio element.
 </audio><audio id="6-8" controls style="display:none" preload="auto" >
-  <source src="acoustic/acousticguitar-6string-08-c.wav" type="audio/wav"> Your browser does not support the audio element.
-</audio><audio id="6-9" controls style="display:none" preload="auto" >
-  <source src="acoustic/acousticguitar-6string-09-c.wav" type="audio/wav"> Your browser does not support the audio element.
-</audio><audio id="6-10" controls style="display:none" preload="auto" >
-  <source src="acoustic/acousticguitar-6string-10-d.wav" type="audio/wav"> Your browser does not support the audio element.
-</audio><audio id="6-11" controls style="display:none" preload="auto" >
-  <source src="acoustic/acousticguitar-6string-11-d.wav" type="audio/wav"> Your browser does not support the audio element.
-</audio><audio id="6-12" controls style="display:none" preload="auto" >
-  <source src="acoustic/acousticguitar-6string-12-e.wav" type="audio/wav"> Your browser does not support the audio element.
+  <source src="acoustic/eight.wav" type="audio/wav"> Your browser does not support the audio element.
 </audio><audio id="macro" controls style="display:none" preload="auto" >
-  <source src="acoustic/macro2.wav" type="audio/wav"> Your browser does not support the audio element.
+  <source src="acoustic/macro.wav" type="audio/wav"> Your browser does not support the audio element.
 </audio>
 
 <script>
@@ -54,41 +44,22 @@ var ten = "000";
 var eleven = "11";
 var twelve = "12";
 var thirteen = "13";
-document.addEventListener("contextmenu", function(event) {
-event.preventDefault(); 
-if(!document.getElementById('macro').paused){
-document.getElementById('macro').pause();
-document.getElementById('macro').currentTime = 0;
-mute=false;
 
-}
-   if(document.getElementById('macro').ended){
-   mute = false;
-   }
-if(mute == false){
-console.log(n);
-    document.getElementById('6-0').play();
-	if (n.indexOf("1432") > 1) {
-	document.getElementById('macro').play();
-	console.log("YAYAY");
-	n = "000";
-	mute = true;
-	console.log(mute);
-		
-	}
-	    if (document.getElementById('6-0').paused && mute == false) {
-        document.getElementById('6-0').play();
-		}else{
-     document.getElementById('6-0').currentTime = 0
-	console.log("0");
-   }}});
+
   
 document.addEventListener('keydown', function(e) {
 if(mute == false){
   if (e.keyCode == 83) {
+  
+  
+  
   n = n.concat(one);
   
-    document.getElementById('6-1').play();
+  
+
+
+  
+    
 	    if (document.getElementById('6-1').paused) {
         document.getElementById('6-1').play();
 		}else{
@@ -160,9 +131,32 @@ if(mute == false){
 	console.log("7");
    }}}});
 document.addEventListener('keydown', function(e) {
+if (e.keyCode == 70) {
+if(!document.getElementById('macro').paused){
+document.getElementById('macro').pause();
+document.getElementById('macro').currentTime = 0;
+mute=false;
+}
+   if(document.getElementById('macro').ended){
+   mute = false;
+   }
+}
+
+
 if(mute == false){
   if (e.keyCode == 70) {
+  console.log(n);
     document.getElementById('6-8').play();
+	if (n.indexOf("1432") > 1) {
+	document.getElementById('macro').play();
+	console.log("YAYAY");
+	n = "000";
+	mute = true;
+	console.log(mute);
+		
+	}
+  
+  
 	    if (document.getElementById('6-8').paused) {
         document.getElementById('6-8').play();
 		}else{
